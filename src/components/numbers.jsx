@@ -1,12 +1,9 @@
+const numbersImg = []
+
 function Numbers() {
     return (
         <div className="numbers">
-            <div className="numbers-item"><img src="./img/numbers__item.png" alt="numbers" /></div>
-            <div className="numbers-item"><img src="./img/numbers__item.png" alt="numbers" /></div>
-            <div className="numbers-item"><img src="./img/numbers__item.png" alt="numbers" /></div>
-            <div className="numbers-item"><img src="./img/numbers__item.png" alt="numbers" /></div>
-            <div className="numbers-item"><img src="./img/numbers__item.png" alt="numbers" /></div>
-            <div className="numbers-item"><img src="./img/numbers__item.png" alt="numbers" /></div>
+            {[...Array(6)].map((_, id) => <div key={id} className="numbers-item"><img src="./img/numbers__item.png" alt="numbers" /></div>)}
         </div>
     )
 }
